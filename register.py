@@ -29,7 +29,7 @@ class Register:
                         condition=True
                 if condition is False:
                     acc_no = 'MUF' + str('%0.4d' % randint(0, 9999))
-                    with open("registeredNumbers.txt","wb+") as f:
+                    with open("registeredNumbers.txt","wb") as f:
                         regis_nums[acc_no]=phone
                         pickle.dump(regis_nums,f)
                     Bank(name, phone, enc_password, enc_trans_pin, acc_no, cash)
